@@ -41,6 +41,13 @@
 24-->/Users/user/coronahoxy/app/src/main/AndroidManifest.xml:16:27-74
 25            </intent-filter>
 26        </activity>
-27    </application>
-28
-29</manifest>
+27
+28        <service
+28-->[androidx.room:room-runtime:2.2.4] /Users/user/.gradle/caches/transforms-2/files-2.1/11f4c3c7c12bfb2d178ad7664c295997/room-runtime-2.2.4/AndroidManifest.xml:25:9-27:40
+29            android:name="androidx.room.MultiInstanceInvalidationService"
+29-->[androidx.room:room-runtime:2.2.4] /Users/user/.gradle/caches/transforms-2/files-2.1/11f4c3c7c12bfb2d178ad7664c295997/room-runtime-2.2.4/AndroidManifest.xml:26:13-74
+30            android:exported="false" />
+30-->[androidx.room:room-runtime:2.2.4] /Users/user/.gradle/caches/transforms-2/files-2.1/11f4c3c7c12bfb2d178ad7664c295997/room-runtime-2.2.4/AndroidManifest.xml:27:13-37
+31    </application>
+32
+33</manifest>
