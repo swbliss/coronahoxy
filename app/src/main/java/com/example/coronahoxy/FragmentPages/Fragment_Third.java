@@ -1,4 +1,4 @@
-package com.example.coronahoxy;
+package com.example.coronahoxy.FragmentPages;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,11 +8,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
+import com.example.coronahoxy.R;
 
-public class Fragment_Second extends Fragment {
+public class Fragment_Third extends Fragment {
 	ViewPager viewPager;
 
-	public Fragment_Second(){
+	public Fragment_Third(){
 
 	}
 
@@ -20,7 +21,7 @@ public class Fragment_Second extends Fragment {
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
 		@Nullable Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.second_page, container, false);
+		View view = inflater.inflate(R.layout.third_page, container, false);
 		return view;
 	}
 }

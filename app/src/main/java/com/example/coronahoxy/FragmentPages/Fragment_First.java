@@ -1,17 +1,22 @@
-package com.example.coronahoxy;
+package com.example.coronahoxy.FragmentPages;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import com.example.coronahoxy.R;
+import com.example.coronahoxy.Route.RouteCheckActivity;
 
 import com.naver.maps.map.MapView;
 
 public class Fragment_First extends Fragment {
 	MapView mapView;
+	TextView routeCheck;
 
 	public Fragment_First(){
 
@@ -25,12 +30,25 @@ public class Fragment_First extends Fragment {
 		return view;
 	}
 
+	private View.OnClickListener myListener = new View.OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			switch (v.getId()){
+				case R.id.first_check_route:
+					Intent intent = new Intent(getActivity(), RouteCheckActivity.class);
+					startActivity(intent);
+					break;
+			}
+		}
+	};
 	@Override
 	public void onViewCreated(@NonNull View view,
 		@Nullable Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
 		mapView = view.findViewById(R.id.first_map_view);
 		mapView.onCreate(savedInstanceState);
+		routeCheck = view.findViewById(R.id.first_check_route);
+		routeCheck.setOnClickListener(myListener);
 	}
 
 	@Override

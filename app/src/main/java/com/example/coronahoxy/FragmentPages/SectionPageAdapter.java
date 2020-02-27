@@ -1,4 +1,4 @@
-package com.example.coronahoxy;
+package com.example.coronahoxy.FragmentPages;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-class SectionPageAdapter extends FragmentPagerAdapter {
+public class SectionPageAdapter extends FragmentPagerAdapter {
 	private final List<Fragment> mFragmentList = new ArrayList<>();
 
 	public SectionPageAdapter(@NonNull FragmentManager fm, int behavior) {

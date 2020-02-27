@@ -1,7 +1,8 @@
-package com.example.coronahoxy;
+package com.example.coronahoxy.MainActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.example.coronahoxy.R;
 
 public class LocationRecommendActivity extends AppCompatActivity {
 

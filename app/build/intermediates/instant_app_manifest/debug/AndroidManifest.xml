@@ -34,14 +34,16 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.coronahoxy.Route.RouteCheckActivity" />
+
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="mlknmjo0k2" />
 
         <activity
-            android:name="com.example.coronahoxy.LocationRecommendActivity"
+            android:name="com.example.coronahoxy.MainActivity.LocationRecommendActivity"
             android:theme="@style/Transparent" />
-        <activity android:name="com.example.coronahoxy.MainActivity" >
+        <activity android:name="com.example.coronahoxy.MainActivity.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

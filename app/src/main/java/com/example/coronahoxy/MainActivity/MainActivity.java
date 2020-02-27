@@ -1,4 +1,4 @@
-package com.example.coronahoxy;
+package com.example.coronahoxy.MainActivity;
 
 import android.Manifest;
 import android.content.Intent;
@@ -13,11 +13,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
+import com.example.coronahoxy.FragmentPages.SectionPageAdapter;
+import com.example.coronahoxy.FragmentPages.Fragment_First;
+import com.example.coronahoxy.FragmentPages.Fragment_Second;
+import com.example.coronahoxy.FragmentPages.Fragment_Third;
+import com.example.coronahoxy.R;
 import com.google.android.material.tabs.TabLayout;
-import com.google.android.material.tabs.TabLayoutMediator;
 
-import com.naver.maps.map.MapView;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
 
