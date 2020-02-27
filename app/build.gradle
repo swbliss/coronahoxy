@@ -17,6 +17,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -49,4 +53,10 @@ dependencies {
 
     //TabLayout
     implementation 'com.google.android.material:material:1.1.0'
+
+    //Permission
+    implementation 'gun0912.ted:tedpermission:1.0.3'
+
+    //Naver Map API
+    implementation 'com.naver.maps:map-sdk:3.7.0'
 }
