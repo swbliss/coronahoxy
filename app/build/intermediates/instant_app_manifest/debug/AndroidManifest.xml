@@ -11,6 +11,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <uses-feature
         android:glEsVersion="0x00020000"
@@ -35,11 +36,6 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.example.coronahoxy.Route.RouteCheckActivity" />
-
-        <meta-data
-            android:name="com.naver.maps.map.CLIENT_ID"
-            android:value="mlknmjo0k2" />
-
         <activity
             android:name="com.example.coronahoxy.MainActivity.LocationRecommendActivity"
             android:theme="@style/Transparent" />
@@ -50,6 +46,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name="com.example.coronahoxy.API_and_Tools.RouteStorageService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.example.coronahoxy.API_and_Tools.RestartService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name="com.example.coronahoxy.API_and_Tools.AlarmReceiver" />
+        <receiver
+            android:name="com.example.coronahoxy.API_and_Tools.RebootReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name="com.gun0912.tedpermission.TedPermissionActivity"
             android:theme="@style/Theme.Transparent" />
@@ -68,6 +85,14 @@
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:label="@string/navermap_open_source_license"
             android:theme="@style/navermap_app" />
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <service
             android:name="androidx.room.MultiInstanceInvalidationService"

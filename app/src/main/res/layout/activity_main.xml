@@ -29,7 +29,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.viewpager.widget.ViewPager
+    <com.example.coronahoxy.FragmentPages.CustomViewPager
             android:id="@+id/main_pager"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -37,6 +37,7 @@
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@id/main_top_bar"
             app:layout_constraintBottom_toTopOf="@id/main_bottom_tab"
+            android:isScrollContainer="false"
         />
     <com.google.android.material.tabs.TabLayout
             android:id="@+id/main_bottom_tab"

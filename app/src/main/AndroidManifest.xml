@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
             android:name=".CorynaHoxy"
@@ -13,12 +14,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".Route.RouteCheckActivity"></activity>
-
-        <meta-data
-                android:name="com.naver.maps.map.CLIENT_ID"
-                android:value="mlknmjo0k2" />
-
+        <activity android:name=".Route.RouteCheckActivity" />
         <activity
                 android:name=".MainActivity.LocationRecommendActivity"
                 android:theme="@style/Transparent" />
@@ -29,6 +25,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service
+                android:name=".API_and_Tools.RouteStorageService"
+                android:enabled="true"
+                android:exported="true" />
+        <service
+                android:name=".API_and_Tools.RestartService"
+                android:enabled="true"
+                android:exported="true" />
+
+        <receiver android:name=".API_and_Tools.AlarmReceiver"/>
+
+        <receiver
+                android:name=".API_and_Tools.RebootReceiver"
+                android:enabled="true"
+                android:exported="false"
+                android:process=":remote">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
